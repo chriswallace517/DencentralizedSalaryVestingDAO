@@ -1,0 +1,46 @@
+[project]
+name = 'DecentralizeSalaryVestingDAO'
+description = 'A decentralized salary vesting system for DAOs built on Stacks blockchain'
+authors = ['DAO Developer']
+telemetry = true
+cache_dir = '.\.cache'
+requirements = []
+
+[contracts.Salarypool]
+path = 'contracts/Salarypool.clar'
+clarity_version = 3
+epoch = 3.0
+
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
+[repl.remote_data]
+enabled = false
+api_url = 'https://api.hiro.so'
+
+# Development accounts for testing
+[[repl.accounts]]
+name = "deployer"
+address = "ST1PQHQKV0RJXZFY1DGX8MNSNYVE3VGZJSRTPGZGM"
+balance = 100000000000000
+
+[[repl.accounts]]
+name = "wallet_1"
+address = "ST1SJ3DTE5DN7X54YDH5D64R3BCB6A2AG2ZQ8YPD5"
+balance = 100000000000000
+
+[[repl.accounts]]
+name = "wallet_2"
+address = "ST2CY5V39NHDPWSXMW9QDT3HC3GD6Q6XX4CFRK9AG"
+balance = 100000000000000
+
+[[repl.accounts]]
+name = "wallet_3"
+address = "ST2JHG361ZXG51QTKY2NQCVBPPRRE2KZB1HR05NNC"
+balance = 100000000000000
